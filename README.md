@@ -20,9 +20,13 @@ var config = {
             header: 'Roomba', // Optional
             config: {
                 // See below for configurable options
-                username: 'xxxxxxxxxxxxx',
-                password: ':1:1486937829:gktkDoYpWaDxCfGh',
-                ipAddress: '192.168.1.44'
+                robots: [
+                    {
+                        username: 'xxxxxxxxxxxxx',
+                        password: ':1:1486937829:gktkDoYpWaDxCfGh',
+                        ipAddress: '192.168.1.44'
+                    }
+                ]
             }
         }
     ]
