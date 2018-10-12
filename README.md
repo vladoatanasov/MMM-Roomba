@@ -35,13 +35,14 @@ var config = {
 
 ## Configuration options
 
-| Option           | Description
-|----------------- |-----------
-| `username`       | *Required* Username of Roomba. See [Dorita980](https://github.com/koalazak/dorita980) for more information.
-| `password`       | *Required* Password of Roomba. See [Dorita980](https://github.com/koalazak/dorita980) for more information.
-| `ipAddress`      | *Required* Local IP address of Roomba. See [Dorita980](https://github.com/koalazak/dorita980) for more information.
-| `updateInterval` | *Optional* How often the content will be fetched. <br><br>**Type:** `int`(milliseconds) <br>Default 60000 (1 minute)
-| `animationSpeed` | *Optional* Speed of the update animation. <br><br>**Type:** `int`(milliseconds) <br>Default 2000 milliseconds (2 seconds)
+| Option               | Description
+|--------------------- |-----------
+| `robots`             | *Required* Array of robot objects. See below
+| `robots[].username`  | *Required* Username of Roomba. See [Dorita980](https://github.com/koalazak/dorita980) for more information.
+| `robots[].password`  | *Required* Password of Roomba. See [Dorita980](https://github.com/koalazak/dorita980) for more information.
+| `robots[].ipAddress` | *Required* Local IP address of Roomba. See [Dorita980](https://github.com/koalazak/dorita980) for more information.
+| `updateInterval`     | *Optional* How often the content will be fetched. <br><br>**Type:** `int`(milliseconds) <br>Default 60000 (1 minute)
+| `animationSpeed`     | *Optional* Speed of the update animation. <br><br>**Type:** `int`(milliseconds) <br>Default 2000 milliseconds (2 seconds)
 
 ## Dependencies
 - [Dorita980](https://github.com/koalazak/dorita980) (installed via `npm install`)
