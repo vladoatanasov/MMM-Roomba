@@ -50,11 +50,21 @@ module.exports = NodeHelper.create({
 	updateStats: function() {
 		const self = this;
 
-		let roomba = new Dorita980.Local(
-			self.config.username,
-			self.config.password,
-			self.config.ipAddress
-		);
+		if (self.config.autoIp) {
+			Dorita980.getRobotIP((ierr, ip) => {
+				if (ierr) {
+					return console.log('error looking for robot IP');
+				}
+
+				roomba = new Dorita980.Local(self.config.username, self.config.password, ip);
+			});
+		} else {
+			roomba = new Dorita980.Local(
+				self.config.username,
+				self.config.password,
+				self.config.ipAddress
+			);
+		}
 
 		roomba.getRobotState(ROOMBA_STATS).then((state) => {
 			Object.assign(self.stats, {

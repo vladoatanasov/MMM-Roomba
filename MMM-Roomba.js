@@ -12,6 +12,7 @@ Module.register('MMM-Roomba', {
 		username: '',
 		password: '',
 		ipAddress: '',
+		autoIp: false,
 		updateInterval: 60 * 1000, // 1 miniute
 		animationSpeed: 2 * 1000, // 2 seconds
 	},
