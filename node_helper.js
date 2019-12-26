@@ -49,6 +49,7 @@ module.exports = NodeHelper.create({
 
 	updateStats: function() {
 		const self = this;
+		let roomba = null;
 
 		if (self.config.autoIp) {
 			Dorita980.getRobotIP((ierr, ip) => {
